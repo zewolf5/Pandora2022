@@ -13,6 +13,7 @@ namespace PandoraSimEngine
     {
         private bool _isRunning = false;
         private Chaos _chaos;
+        private Shopping _shopping;
         private Population _population;
         private TheService _service;
 
@@ -20,6 +21,7 @@ namespace PandoraSimEngine
         {
             _isRunning = true;
             _chaos = new Chaos();
+            _shopping = new Shopping();
             _population = populationData;
             _service = service;
 
@@ -90,6 +92,38 @@ namespace PandoraSimEngine
                         person.IsPensionist = true;
                         Console.WriteLine($"Person {person.Id} created account.");
                     }
+                    break;
+                case ChaosType.GotSalary:
+                    //if (!person.IsPensionist)
+                    //{
+                    //    _service.MarkPensionist(person);
+                    //    person.IsPensionist = true;
+                    //    Console.WriteLine($"Person {person.Id} created account.");
+                    //}
+                    break;
+                case ChaosType.WentShopping:
+                    if (person.Card > 0|| person.Cash > 0)
+                    {
+                        var product = _shopping.GetProduct();
+                        //BANK WITHDRAW, CAHS?
+                        Console.WriteLine($"Person {person.Id} bought {product.product} for {product.price}.");
+                    }
+                    break;
+                case ChaosType.WithdrawMoney:
+                    //if (!person.IsPensionist)
+                    //{
+                    //    _service.MarkPensionist(person);
+                    //    person.IsPensionist = true;
+                    //    Console.WriteLine($"Person {person.Id} created account.");
+                    //}
+                    break;
+                case ChaosType.DepositMoney:
+                    //if (!person.IsPensionist)
+                    //{
+                    //    _service.MarkPensionist(person);
+                    //    person.IsPensionist = true;
+                    //    Console.WriteLine($"Person {person.Id} created account.");
+                    //}
                     break;
                 default:
 

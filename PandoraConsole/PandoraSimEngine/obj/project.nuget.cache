@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xqWSJoig5pnU7GILgifipt+dstcoOZRV2GU/uZ2JmWZ1RwHBNsA1nvHVImacEpsbSumX5D2CscXX/zjEV25ApQ==",
+  "dgSpecHash": "uBY/ra7ZeTDRtY0uSiOnbkiMgJY/NIho8+DMaNTf01f3w3fsDQnd9dM0P6Gcjna6IX/dcuy/AFojiLIO8iIFlg==",
   "success": true,
   "projectFilePath": "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\AB01959\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

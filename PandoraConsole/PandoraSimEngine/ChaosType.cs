@@ -15,6 +15,8 @@ namespace PandoraSimEngine
         Retired, //???
         GotSalary,
         WentShopping,
+        WithdrawMoney,
+        DepositMoney,
 
     }
 }

@@ -24,14 +24,16 @@ namespace PandoraSimEngine
             });
             eventChances.Add(ChaosType.NewJob, () =>
             {
-                if (person.Age >= 12 && person.Age <= 35) return 2000;
+                if (person.Age >= 18 && person.Age <= 35) return 2000;
                 if (person.Age >= 36 && person.Age <= 70) return 6000;
+                if (person.Age >= 70 ) return 60000;
                 return 0;
             });
             eventChances.Add(ChaosType.QuitJob, () =>
             {
                 if (person.Age >= 12 && person.Age <= 35) return 2000;
                 if (person.Age >= 36 && person.Age <= 70) return 6000;
+                if (person.Age >= 70 ) return 2000;
                 return 0;
             });
             eventChances.Add(ChaosType.CreateAccount, () =>

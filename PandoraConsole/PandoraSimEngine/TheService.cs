@@ -33,7 +33,7 @@ namespace PandoraSimEngine
             throw new NotImplementedException();
         }
 
-        internal void RegisterPerson(Person person)
+        internal SimPerson RegisterPerson(Person person)
         {
             throw new NotImplementedException();
         }

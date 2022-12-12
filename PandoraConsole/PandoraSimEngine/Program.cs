@@ -1,18 +1,34 @@
-﻿using PandoraSimEngine;
+﻿using Newtonsoft.Json;
+using PandoraSimEngine;
 using PandoraSimEngine.Entities;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        var personDataPath = @"C:\temp\persons.json";
         TestEvents();
         var populationData = GetPopulationData();
         var service = new TheService();
 
-        foreach (var person in populationData.Persons)
+        var persons = new List<SimPerson>();
+        if (!File.Exists(personDataPath))
         {
-            service.RegisterPerson(person);
+            foreach (var person in populationData.Persons)
+            {
+                var simPerson = service.RegisterPerson(person);
+                persons.Add(simPerson);
+            }
+
+            var str = JsonConvert.SerializeObject(persons);
+            File.WriteAllText(personDataPath, str);
         }
+        else
+        {
+            persons = JsonConvert.DeserializeObject<List<SimPerson>>(personDataPath);
+        }
+
+        //Persistering
 
         var sim = new SimEngine(populationData, service);
 
