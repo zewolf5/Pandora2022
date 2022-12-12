@@ -42,6 +42,10 @@ namespace PandoraSimEngine
         {
             throw new NotImplementedException();
         }
+        internal void WithdrawMoney(Person person, float amount)
+        {
+            throw new NotImplementedException();
+        }
 
         internal void BuyProduct(Person person, string product, string description, float price)
         {

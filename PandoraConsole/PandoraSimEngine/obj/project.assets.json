@@ -14,6 +14,20 @@
             "related": ".xml"
           }
         }
+      },
+      "Pandora.Access/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": "1.0.0",
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "compile": {
+          "bin/placeholder/Pandora.Access.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pandora.Access.dll": {}
+        }
       }
     }
   },
@@ -47,11 +61,18 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "Pandora.Access/1.0.0": {
+      "type": "project",
+      "path": "../Pandora.Access/Pandora.Access.csproj",
+      "msbuildProject": "../Pandora.Access/Pandora.Access.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Newtonsoft.Json >= 13.0.2"
+      "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
+      "Newtonsoft.Json >= 13.0.2",
+      "Pandora.Access >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -85,7 +106,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj": {
+              "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj"
+            },
+            "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
+              "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -122,5 +150,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

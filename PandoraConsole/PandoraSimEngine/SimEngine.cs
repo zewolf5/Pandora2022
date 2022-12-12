@@ -1,4 +1,5 @@
-﻿using PandoraSimEngine.Entities;
+﻿using Pandora.Access.Access;
+using PandoraSimEngine.Entities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,16 +16,15 @@ namespace PandoraSimEngine
         private Chaos _chaos;
         private Shopping _shopping;
         private Population _population;
-        private TheService _service;
+        private PandoraService _service;
 
-        public SimEngine(Population populationData, TheService service)
+        public SimEngine(Population populationData, PandoraService service)
         {
             _isRunning = true;
             _chaos = new Chaos();
             _shopping = new Shopping();
             _population = populationData;
             _service = service;
-
         }
 
         public void Start()
@@ -42,8 +42,6 @@ namespace PandoraSimEngine
                     }
                 }
 
-
-
                 Thread.Sleep(Math.Max(0, 120000 - (int)sw.ElapsedMilliseconds)); //1 day per 2 minutes
             }
             Console.WriteLine($"Sim ending");
@@ -56,7 +54,7 @@ namespace PandoraSimEngine
                 case ChaosType.Death:
                     if (!person.IsDead)
                     {
-                        _service.MarkDead(person);
+                        //_service.MarkDead(person);
                         person.IsDead = true;
                         Console.WriteLine($"Person {person.Id} just died.");
                     }
@@ -117,7 +115,7 @@ namespace PandoraSimEngine
 
                 case ChaosType.WithdrawMoney:
                     float amount1 = new Random().Next(10000);
-                    _service.DepositMoney(person, amount1);
+                    _service.WithdrawMoney(person, amount1);
                     Console.WriteLine($"Person {person.Id} withdrew {amount1}.");
                     break;
 

@@ -1,15 +1,19 @@
 ﻿using Newtonsoft.Json;
+using Pandora.Access.Access;
+using Pandora.Access.Access.Http;
 using PandoraSimEngine;
 using PandoraSimEngine.Entities;
+using System.Net.Cache;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        //TestEvents();
+
         var personDataPath = @"C:\temp\persons.json";
-        TestEvents();
         var populationData = GetPopulationData();
-        var service = new TheService();
+        var service = new PandoraService();
 
         var persons = new List<SimPerson>();
         if (!File.Exists(personDataPath))

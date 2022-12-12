@@ -12,6 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pandora.Access\Pandora.Access.csproj" />
+    <ProjectReference Include="..\Pandora.Common\Pandora.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="produktliste.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
