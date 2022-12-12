@@ -1,0 +1,13 @@
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\bin\Debug\net6.0\Pandora.Input.deps.json
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\bin\Debug\net6.0\Pandora.Input.dll
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\bin\Debug\net6.0\Pandora.Input.pdb
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.csproj.AssemblyReference.cache
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.AssemblyInfoInputs.cache
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.AssemblyInfo.cs
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.csproj.CoreCompileInputs.cache
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.dll
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\refint\Pandora.Input.dll
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.pdb
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\obj\Debug\net6.0\ref\Pandora.Input.dll
+C:\Users\ab12229\Source\Repos\Pandora2022-1\PandoraConsole\Pandora.Input\bin\Debug\net6.0\Resorces\nøkkelinfo_200.json

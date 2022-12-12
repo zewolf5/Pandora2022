@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "xqWSJoig5pnU7GILgifipt+dstcoOZRV2GU/uZ2JmWZ1RwHBNsA1nvHVImacEpsbSumX5D2CscXX/zjEV25ApQ==",
+  "dgSpecHash": "gXEhbIoO/wvxN/pb59Qe5PfHTzlBcZqE9P22d5zvncDjvrwE/qwhaX9NesyFxwTuDXL53WI6yVDgOH6lpCkGNg==",
   "success": true,
-  "projectFilePath": "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj",
+  "projectFilePath": "C:\\Users\\ab12229\\source\\repos\\Pandora2022-1\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

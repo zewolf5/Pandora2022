@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pandora.Input\Pandora.Input.csproj" />
+  </ItemGroup>
+
 </Project>

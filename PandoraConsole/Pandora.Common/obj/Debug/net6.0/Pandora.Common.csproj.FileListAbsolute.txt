@@ -10,3 +10,15 @@ C:\pandora\Pandora2022\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Co
 C:\pandora\Pandora2022\PandoraConsole\Pandora.Common\obj\Debug\net6.0\refint\Pandora.Common.dll
 C:\pandora\Pandora2022\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Common.pdb
 C:\pandora\Pandora2022\PandoraConsole\Pandora.Common\obj\Debug\net6.0\ref\Pandora.Common.dll
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\bin\Debug\net6.0\Pandora.Common.deps.json
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\bin\Debug\net6.0\Pandora.Common.dll
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\bin\Debug\net6.0\Pandora.Common.pdb
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Common.csproj.AssemblyReference.cache
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Common.AssemblyInfoInputs.cache
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Common.AssemblyInfo.cs
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Common.csproj.CoreCompileInputs.cache
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Common.dll
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\refint\Pandora.Common.dll
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\Pandora.Common.pdb
+C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Common\obj\Debug\net6.0\ref\Pandora.Common.dll
