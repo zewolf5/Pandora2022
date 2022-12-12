@@ -110,8 +110,6 @@ namespace PandoraSimEngine
                         _service.BuyProduct(person, product.product, product.description, product.price);
                         Console.WriteLine($"Person {person.OrignalData.Identifikator} bought: {product.product} ({product.description}) for {product.price}. {person.Card} left on card.");
                     }
-
-                    Console.WriteLine($"Person {person.OrignalData.Identifikator} bought {product.product} ({product.description}) for {product.price}.");
                     break;
 
                 case ChaosType.WithdrawMoney:
