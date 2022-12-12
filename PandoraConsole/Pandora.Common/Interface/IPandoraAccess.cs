@@ -13,4 +13,6 @@ public interface IPandoraAccess
     bool WithdrawMoney(PersonData person, float amount1);
     void DepositMoney(PersonData person, float amount2);
     DateTime GetCurrentDate();
+    float GetSalary(PersonData person);
+
 }

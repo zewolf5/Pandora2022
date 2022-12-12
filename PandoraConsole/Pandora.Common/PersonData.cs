@@ -16,7 +16,7 @@ namespace Pandora.Common
         public bool HasAccount { get; set; }
         public bool HasJob { get; set; }
         //public bool IsPensionist { get; set; }
-        public int Card { get; set; }
+        public float Card { get; set; }
         public int Age { get; set; }
         public float Cash { get; set; }
     }

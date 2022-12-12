@@ -39,8 +39,14 @@ namespace PandoraSimEngine
             while (_isRunning)
             {
                 var sw = Stopwatch.StartNew();
+
                 foreach (var person in persons)
                 {
+                    if (currentDate.Day == 1)
+                    {
+                        var newBankDebit = _service.GetSalary(person);
+                        if (newBankDebit > 0) person.Card = newBankDebit;
+                    }
                     var numberOfDaysSinceLastRun = (int)currentDate.Subtract(previousDate).TotalDays;
                     for (int i = 0; i < numberOfDaysSinceLastRun; i++)
                     {
@@ -96,12 +102,13 @@ namespace PandoraSimEngine
                     if (person.Cash >= product.price)
                     {
                         person.Cash -= product.price;
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought with CASH: {product.product} ({product.description}) for {product.price}.");
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought with CASH: {product.product} ({product.description}) for {product.price}. {person.Cash} cash left.");
                     }
                     else
                     {
+                        person.Card -= product.price;
                         _service.BuyProduct(person, product.product, product.description, product.price);
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought: {product.product} ({product.description}) for {product.price}.");
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought: {product.product} ({product.description}) for {product.price}. {person.Card} left on card.");
                     }
 
                     Console.WriteLine($"Person {person.OrignalData.Identifikator} bought {product.product} ({product.description}) for {product.price}.");

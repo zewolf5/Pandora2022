@@ -12,7 +12,6 @@ namespace PandoraSimEngine
             var birthdate = DateTime.Parse(person.OrignalData.Foedselsdato);
             person.Age = GetAge(birthdate);
 
-
             var eventChances = new Dictionary<ChaosType, Func<int>>();
 
             if (!person.HasJob && !person.HasAccount)
@@ -31,12 +30,6 @@ namespace PandoraSimEngine
             }
             else
             {
-                eventChances.Add(ChaosType.Retired, () =>
-                {
-                    if (person.Age >= 67) return 1000;
-                    if (person.Age >= 60 && person.Age <= 67) return 30000; //early pension
-                    return 0;
-                });
                 eventChances.Add(ChaosType.NewJob, () =>
                 {
                     if (person.Age >= 18 && person.Age <= 35) return 2000;
@@ -51,20 +44,27 @@ namespace PandoraSimEngine
                     if (person.Age >= 70) return 2000;
                     return 0;
                 });
-                eventChances.Add(ChaosType.CreateAccount, () =>
-                {
-                    if (person.Age >= 12 && person.Age <= 70) return 200;
-                    return 0;
-                });
-                eventChances.Add(ChaosType.Death, () =>
-                {
-                    if (person.Age >= 12 && person.Age <= 70) return 30000; //ca 80 år
-                    if (person.Age >= 70) return 7500;
-                    return 0;
-                });
+                //eventChances.Add(ChaosType.CreateAccount, () =>
+                //{
+                //    if (person.Age >= 12 && person.Age <= 70) return 200;
+                //    return 0;
+                //});
+                //eventChances.Add(ChaosType.Death, () =>
+                //{
+                //    if (person.Age >= 12 && person.Age <= 70) return 30000; //ca 80 år
+                //    if (person.Age >= 70) return 7500;
+                //    return 0;
+                //});
                 eventChances.Add(ChaosType.WentShopping, () =>
                 {
-                    return 4;
+                    if (person.OrignalData.Kjoenn == "kvinne")
+                    {
+                        return 2;
+                    }
+                    else
+                    {
+                        return 4;
+                    }
                 });
                 eventChances.Add(ChaosType.DepositMoney, () =>
                 {

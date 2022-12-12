@@ -8,11 +8,11 @@ namespace PandoraSimEngine
 {
     internal enum ChaosType
     {
-        Death,
+        //Death,
         CreateAccount,
         NewJob,
         QuitJob,
-        Retired, //???
+        //Retired, //???
         //GotSalary,
         WentShopping,
         WithdrawMoney,

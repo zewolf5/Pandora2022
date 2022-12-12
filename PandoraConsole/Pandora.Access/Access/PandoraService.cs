@@ -63,4 +63,9 @@ public class PandoraService : IPandoraAccess
     {
         throw new NotImplementedException();
     }
+
+    public float GetSalary(PersonData person)
+    {
+        return 0;
+    }
 }
