@@ -39,3 +39,8 @@ C:\pandora\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\Pandora.
 C:\pandora\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.csproj.CopyComplete
 C:\pandora\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.genruntimeconfig.cache
 C:\pandora\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\ref\PandoraSimEngine.dll
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\Data\nøkkelinfo_200.json
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\Pandora.Access.dll
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\Pandora.Common.dll
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\Pandora.Access.pdb
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\Pandora.Common.pdb

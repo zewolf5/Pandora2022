@@ -9,20 +9,27 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
 using Pandora.Common;
+using System.Diagnostics.CodeAnalysis;
+using Newtonsoft.Json;
 
 namespace PandoraSimEngine
 {
     internal class SimEngine
     {
-        private bool _isRunning = false;
+        public bool IsRunning { get; set; } = false;
+        public bool IsPaused { get; set; } = false;
+
+
+        private DateTime _simStart;
         private Chaos _chaos;
         private Shopping _shopping;
         private List<PersonData> _population;
         private IPandoraAccess _service;
+        const string SimulationStateFile = @"SimulationState.json";
 
         public SimEngine(List<PersonData> populationData, IPandoraAccess service)
         {
-            _isRunning = true;
+            IsRunning = true;
             _chaos = new Chaos();
             _shopping = new Shopping();
             _population = populationData;
@@ -31,39 +38,66 @@ namespace PandoraSimEngine
 
         public void Start()
         {
-            var persons = _population;
+            var simulation = new Simulation();
+
             var currentDate = _service.GetCurrentDate();
             var previousDate = currentDate.AddDays(-1);
-            Console.WriteLine($"*** STARTING SIMULATION ***");
 
-            while (_isRunning)
+            if (File.Exists(SimulationStateFile) && new FileInfo(SimulationStateFile).Length > 0)
             {
-                var sw = Stopwatch.StartNew();
+                var fileData = File.ReadAllText(SimulationStateFile);
+                simulation = JsonConvert.DeserializeObject<Simulation>(fileData);
+                previousDate = simulation.LastSimulation;
+            }
+            else
+            {
+                simulation.PersonList = _population;
+            }
 
-                foreach (var person in persons)
+            _simStart = DateTime.Now;
+
+            Log($"*** STARTING SIMULATION ***");
+
+            while (IsRunning)
+            {
+                while (IsPaused && IsRunning)
                 {
-                    if (currentDate.Day == 1)
+                    Thread.Sleep(10);
+                }
+
+                var sw = Stopwatch.StartNew();
+                var numberOfDaysSinceLastRun = (int)currentDate.Subtract(previousDate).TotalDays;
+
+                for (int i = 0; i < numberOfDaysSinceLastRun; i++)
+                {
+                    Log($"Processing {previousDate.AddDays(i):yyyy-MM-dd}.");
+
+                    foreach (var person in simulation.PersonList)
                     {
-                        var newBankDebit = _service.GetSalary(person);
-                        if (newBankDebit > 0) person.Card = newBankDebit;
-                    }
-                    var numberOfDaysSinceLastRun = (int)currentDate.Subtract(previousDate).TotalDays;
-                    for (int i = 0; i < numberOfDaysSinceLastRun; i++)
-                    {
-                        Console.WriteLine($"Processing {previousDate.AddDays(i):yyyy-MM-dd}.");
+                        if (currentDate.Day == 1)
+                        {
+                            var newBankDebit = _service.GetSalary(person);
+                            if (newBankDebit > 0) person.Card = newBankDebit;
+                        }
+
                         var events = _chaos.GetEvents(person);
                         foreach (var @event in events)
                         {
                             ProcessEvent(person, @event);
                         }
                     }
-                    previousDate = currentDate;
                 }
 
+                previousDate = currentDate;
+                simulation.LastSimulation = currentDate;
                 Thread.Sleep(Math.Max(0, 120000 - (int)sw.ElapsedMilliseconds)); //1 day per 2 minutes
                 currentDate = _service.GetCurrentDate();
             }
-            Console.WriteLine($"Sim ending");
+
+            var json = JsonConvert.SerializeObject(simulation);
+            File.WriteAllText(SimulationStateFile, json, Encoding.GetEncoding("ISO-8859-1"));
+
+            Log($"*** SIMULATION ENDED ***");
         }
 
         private void ProcessEvent(PersonData person, Event @event)
@@ -75,7 +109,7 @@ namespace PandoraSimEngine
                     {
                         object value = _service.CreateAccount(person);
                         person.HasAccount = true;
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} created account.");
+                        Log($"Person {person.OrignalData.Identifikator} created account.");
                     }
                     break;
                 case ChaosType.NewJob:
@@ -83,7 +117,7 @@ namespace PandoraSimEngine
                     {
                         _service.NewJob(person);
                         person.HasJob = true;
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} started in a new job.");
+                        Log($"Person {person.OrignalData.Identifikator} started in a new job.");
                     }
                     break;
 
@@ -92,7 +126,7 @@ namespace PandoraSimEngine
                     {
                         _service.QuitJob(person);
                         person.HasJob = false;
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} just quit their job.");
+                        Log($"Person {person.OrignalData.Identifikator} just quit their job.");
                     }
                     break;
 
@@ -102,13 +136,13 @@ namespace PandoraSimEngine
                     if (person.Cash >= product.price)
                     {
                         person.Cash -= product.price;
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought with CASH: {product.product} ({product.description}) for {product.price}. {person.Cash} cash left.");
+                        Log($"Person {person.OrignalData.Identifikator} bought with CASH: {product.product} ({product.description}) for {product.price}. {person.Cash} cash left.");
                     }
                     else
                     {
                         person.Card -= product.price;
                         _service.BuyProduct(person, product.product, product.description, product.price);
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought: {product.product} ({product.description}) for {product.price}. {person.Card} left on card.");
+                        Log($"Person {person.OrignalData.Identifikator} bought: {product.product} ({product.description}) for {product.price}. {person.Card} left on card.");
                     }
                     break;
 
@@ -118,7 +152,7 @@ namespace PandoraSimEngine
                     if (ok)
                     {
                         person.Cash += amount1;
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} withdrew {amount1}.");
+                        Log($"Person {person.OrignalData.Identifikator} withdrew {amount1}.");
                     }
                     break;
 
@@ -128,7 +162,7 @@ namespace PandoraSimEngine
                     {
                         person.Cash -= amount2;
                         _service.DepositMoney(person, amount2);
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} withdrew {amount2}.");
+                        Log($"Person {person.OrignalData.Identifikator} withdrew {amount2}.");
                     }
                     break;
             }
@@ -136,7 +170,13 @@ namespace PandoraSimEngine
 
         public void Stop()
         {
-            _isRunning = false;
+            IsRunning = false;
+        }
+
+        public void Log(string logText)
+        {
+            Console.WriteLine(logText);
+            File.AppendAllText($"Simulation_{_simStart:yyyy-MM-dd_HH-mm}.log", logText, Encoding.GetEncoding("ISO-8859-1"));
         }
     }
 }

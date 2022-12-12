@@ -59,17 +59,45 @@ internal class Program
             populationData = JsonConvert.DeserializeObject<List<PersonData>>(File.ReadAllText(personDataPath));
         }
 
+        var populationList = populationData.Where(t => !string.IsNullOrEmpty(t.PassportInfo.passport)).ToList();
+        var sim = new SimEngine(populationList, service);
 
-        var sim = new SimEngine(populationData
-            .Where(t => !string.IsNullOrEmpty(t.PassportInfo.passport)).ToList(), service);
+        bool threaded = false;
+        if (threaded)
+        {
+            sim.Start();
+        }
+        else
+        {
+            var thread = new Thread(() =>
+            {
+                sim.Start();
+            });
 
-        sim.Start();
+            while (sim.IsRunning)
+            {
+                var line = Console.ReadKey();
+                if (line.Key == ConsoleKey.Spacebar)
+                {
+                    sim.IsPaused = !sim.IsPaused;
+                    Console.WriteLine($"PAUSE: {sim.IsPaused}");
+                }
+                if (line.Key == ConsoleKey.Escape)
+                {
+                    sim.IsRunning = false;
+                }
+                Thread.Sleep(100);
+            }
+        }
+
+
+
     }
 
     private static List<PersonData> GetPopulationData()
     {
         var jsonData = File.ReadAllText(@"Data\nøkkelinfo_200.json");
-        var docList= JsonConvert.DeserializeObject<Fildata>(jsonData);
+        var docList = JsonConvert.DeserializeObject<Fildata>(jsonData);
 
         return docList!.dokumentListe
             .Select(t => new PersonData
