@@ -33,7 +33,21 @@ namespace PandoraSimEngine
             throw new NotImplementedException();
         }
 
-        internal void RegisterPerson(Person person)
+        internal SimPerson RegisterPerson(Person person)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void DepositMoney(Person person, float amount)
+        {
+            throw new NotImplementedException();
+        }
+        internal void WithdrawMoney(Person person, float amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void BuyProduct(Person person, string product, string description, float price)
         {
             throw new NotImplementedException();
         }

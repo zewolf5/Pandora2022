@@ -4,5 +4,5 @@ namespace Pandora.Common.Interface;
 
 public interface IPandoraAccess
 {
-    void RegisterIndividual(Registration person);
+    RegistrationResponse RegisterIndividual(Registration person);
 }

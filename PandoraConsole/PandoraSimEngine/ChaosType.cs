@@ -13,9 +13,10 @@ namespace PandoraSimEngine
         NewJob,
         QuitJob,
         Retired, //???
-        GotSalary,
-        WentShoppingWithCard,
-        WentShoppingWithCash,
+        //GotSalary,
+        WentShopping,
+        WithdrawMoney,
+        DepositMoney,
 
     }
 }

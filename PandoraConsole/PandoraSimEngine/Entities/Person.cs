@@ -14,6 +14,8 @@ namespace PandoraSimEngine.Entities
         public bool HasJob { get; set; }
         public object Id { get; internal set; }
         public int Age { get; internal set; }
+        public float Card { get; internal set; }
+        public float Cash{ get; internal set; }
         //Community
         //Cash
     }
