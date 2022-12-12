@@ -12,7 +12,10 @@ namespace PandoraSimEngine
         CreateAccount,
         NewJob,
         QuitJob,
-        StartPension,
+        Retired, //???
+        GotSalary,
+        WentShoppingWithCard,
+        WentShoppingWithCash,
 
     }
 }
