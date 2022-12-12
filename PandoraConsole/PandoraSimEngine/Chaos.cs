@@ -9,7 +9,8 @@ namespace PandoraSimEngine
         {
             var rnd = new Random();
             var events = new List<Event>();
-            person.Age = person.OrignalData.Foedselsdato;
+            var birthdate = DateTime.Parse(person.OrignalData.Foedselsdato);
+            person.Age = 0;
             var eventChances = new Dictionary<ChaosType, Func<int>>();
 
             if (!person.HasJob && !person.HasAccount)
