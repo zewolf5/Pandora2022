@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WElIh0HUJerS4I9fiaAq0CfkMaBVC2b/BEITRIAOF3SU/h4vOwGZYDaFQEtvBTf+LixXCrpX8488yJAhoR8F6w==",
+  "dgSpecHash": "045nunHc9Gk9VJcSFhAFwZeOb9SE7XPa2op8owPEHK1M6Cuc2ZDr2EcaqR5hoLMT0dR+vgUh79zi0T0f0bfQfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ab12229\\source\\repos\\Pandora2022-1\\PandoraConsole\\PandoraConsole\\PandoraConsole.csproj",
+  "projectFilePath": "C:\\pandora\\Pandora2022\\PandoraConsole\\PandoraConsole\\PandoraConsole.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ab12229\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\BA05151\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": [
     {

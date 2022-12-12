@@ -1,6 +1,8 @@
 ﻿using Pandora.Access.Access.Http;
 using Pandora.Common.Dto;
 using Pandora.Common.Interface;
+using System.Runtime.Intrinsics.X86;
+using Pandora.Common;
 
 namespace Pandora.Access.Access;
 
@@ -12,11 +14,48 @@ public class PandoraService : IPandoraAccess
     public PandoraService(IHttpRestClient client)
     {
         _httpClient = client;
-        _url = "";
+        _url = "https://hackaton2022.azurewebsites.net/gov";
     }
 
-    public void RegisterIndividual(Registration person)
+    public RegistrationResponse RegisterIndividual(Registration person)
     {
-        
+        var initialDataUrl = $"{_url}/api/population/RegisterIndividual";
+        return _httpClient.Post<Registration, RegistrationResponse>(initialDataUrl, person).Result;
+
+    }
+
+    public object CreateAccount(PersonData person)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void NewJob(PersonData person)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void QuitJob(PersonData person)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void MarkPensionist(PersonData person)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void BuyProduct(PersonData person, string productProduct, string productDescription, float productPrice)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void WithdrawMoney(PersonData person, float amount1)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void DepositMoney(PersonData person, float amount2)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -10,7 +10,6 @@ namespace Pandora.Input
            
             var jsonText = File.ReadAllText("C:\\Users\\ab12229\\Source\\Repos\\Pandora2022-1\\PandoraConsole\\Pandora.Input\\Resorces\\nøkkelinfo_200.json");
             var sponsors = JsonConvert.DeserializeObject<Fildata>(jsonText);
-            var test = true;
         }
     }
         

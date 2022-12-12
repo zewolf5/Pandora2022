@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
+using Pandora.Common;
 
 namespace PandoraSimEngine
 {
@@ -16,10 +17,10 @@ namespace PandoraSimEngine
         private bool _isRunning = false;
         private Chaos _chaos;
         private Shopping _shopping;
-        private Population _population;
+        private List<PersonData> _population;
         private IPandoraAccess _service;
 
-        public SimEngine(Population populationData, IPandoraAccess service)
+        public SimEngine(List<PersonData> populationData, IPandoraAccess service)
         {
             _isRunning = true;
             _chaos = new Chaos();
@@ -30,7 +31,7 @@ namespace PandoraSimEngine
 
         public void Start()
         {
-            var persons = _population.Persons;
+            var persons = _population;
             while (_isRunning)
             {
                 var sw = Stopwatch.StartNew();
@@ -48,7 +49,7 @@ namespace PandoraSimEngine
             Console.WriteLine($"Sim ending");
         }
 
-        private void ProcessEvent(Person person, Event @event)
+        private void ProcessEvent(PersonData person, Event @event)
         {
             switch (@event.EventType)
             {
@@ -57,7 +58,7 @@ namespace PandoraSimEngine
                     {
                         //_service.MarkDead(person);
                         person.IsDead = true;
-                        Console.WriteLine($"Person {person.Id} just died.");
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} just died.");
                     }
                     break;
 
@@ -66,7 +67,7 @@ namespace PandoraSimEngine
                     {
                         object value = _service.CreateAccount(person);
                         person.HasAccount = true;
-                        Console.WriteLine($"Person {person.Id} created account.");
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} created account.");
                     }
                     break;
                 case ChaosType.NewJob:
@@ -74,7 +75,7 @@ namespace PandoraSimEngine
                     {
                         _service.NewJob(person);
                         person.HasJob = true;
-                        Console.WriteLine($"Person {person.Id} started in a new job.");
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} started in a new job.");
                     }
                     break;
 
@@ -83,7 +84,7 @@ namespace PandoraSimEngine
                     {
                         _service.QuitJob(person);
                         person.HasJob = false;
-                        Console.WriteLine($"Person {person.Id} just quit their job.");
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} just quit their job.");
                     }
                     break;
 
@@ -92,7 +93,7 @@ namespace PandoraSimEngine
                     {
                         _service.MarkPensionist(person);
                         person.IsPensionist = true;
-                        Console.WriteLine($"Person {person.Id} created account.");
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} created account.");
                     }
                     break;
 
@@ -110,23 +111,20 @@ namespace PandoraSimEngine
                     {
                         var product = _shopping.GetProduct();
                         _service.BuyProduct(person, product.product, product.description, product.price);
-                        Console.WriteLine($"Person {person.Id} bought {product.product} ({product.description}) for {product.price}.");
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought {product.product} ({product.description}) for {product.price}.");
                     }
                     break;
 
                 case ChaosType.WithdrawMoney:
                     float amount1 = new Random().Next(10000);
                     _service.WithdrawMoney(person, amount1);
-                    Console.WriteLine($"Person {person.Id} withdrew {amount1}.");
+                    Console.WriteLine($"Person {person.OrignalData.Identifikator} withdrew {amount1}.");
                     break;
 
                 case ChaosType.DepositMoney:
                     float amount2 = new Random().Next(10000);
                     _service.DepositMoney(person, amount2);
-                    Console.WriteLine($"Person {person.Id} withdrew {amount2}.");
-                    break;
-                default:
-
+                    Console.WriteLine($"Person {person.OrignalData.Identifikator} withdrew {amount2}.");
                     break;
             }
         }

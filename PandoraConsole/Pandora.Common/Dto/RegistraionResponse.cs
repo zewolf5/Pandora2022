@@ -3,5 +3,5 @@
 public class RegistrationResponse
 {
     public string message { get; set; }
-    private string passport { get; set; }
+    public string passport { get; set; }
 }

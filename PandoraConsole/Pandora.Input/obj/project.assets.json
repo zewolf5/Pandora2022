@@ -55,25 +55,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ab12229\\.nuget\\packages\\": {}
+    "C:\\Users\\BA05151\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ab12229\\source\\repos\\Pandora2022-1\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj",
+      "projectUniqueName": "C:\\pandora\\Pandora2022\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj",
       "projectName": "Pandora.Input",
-      "projectPath": "C:\\Users\\ab12229\\source\\repos\\Pandora2022-1\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj",
-      "packagesPath": "C:\\Users\\ab12229\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ab12229\\source\\repos\\Pandora2022-1\\PandoraConsole\\Pandora.Input\\obj\\",
+      "projectPath": "C:\\pandora\\Pandora2022\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj",
+      "packagesPath": "C:\\Users\\BA05151\\.nuget\\packages\\",
+      "outputPath": "C:\\pandora\\Pandora2022\\PandoraConsole\\Pandora.Input\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ab12229\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BA05151\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
         "http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -114,7 +121,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -1,15 +1,11 @@
 ﻿using PandoraSimEngine.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Pandora.Common;
 
 namespace PandoraSimEngine
 {
     internal class Chaos
     {
-        public List<Event> GetEvents(Person person)
+        public List<Event> GetEvents(PersonData person)
         {
             var rnd = new Random();
             var events = new List<Event>();
