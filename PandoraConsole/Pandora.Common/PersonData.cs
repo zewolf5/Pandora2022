@@ -12,12 +12,12 @@ namespace Pandora.Common
     {
         public Dokumentliste OrignalData { get; set; }
         public RegistrationResponse PassportInfo { get; set; }
-        public bool IsDead { get; set; }
+        //public bool IsDead { get; set; }
         public bool HasAccount { get; set; }
         public bool HasJob { get; set; }
-        public bool IsPensionist { get; set; }
+        //public bool IsPensionist { get; set; }
         public int Card { get; set; }
         public int Age { get; set; }
-        public int Cash { get; set; }
+        public float Cash { get; set; }
     }
 }

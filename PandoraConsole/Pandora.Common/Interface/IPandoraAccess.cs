@@ -10,6 +10,7 @@ public interface IPandoraAccess
     void QuitJob(PersonData person);
     void MarkPensionist(PersonData person);
     void BuyProduct(PersonData person, string productProduct, string productDescription, float productPrice);
-    void WithdrawMoney(PersonData person, float amount1);
+    bool WithdrawMoney(PersonData person, float amount1);
     void DepositMoney(PersonData person, float amount2);
+    DateTime GetCurrentDate();
 }

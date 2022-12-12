@@ -9,13 +9,17 @@ namespace PandoraSimEngine
         {
             var rnd = new Random();
             var events = new List<Event>();
-
+            person.Age = person.OrignalData.Foedselsdato;
             var eventChances = new Dictionary<ChaosType, Func<int>>();
 
             if (!person.HasJob && !person.HasAccount)
             {
+                if (person.Age >= 18)
+                {
+                    eventChances.Add(ChaosType.NewJob, () => 1);
+                }
                 eventChances.Add(ChaosType.CreateAccount, () => 1);
-                eventChances.Add(ChaosType.NewJob, () => 1);
+
                 eventChances.Add(ChaosType.WentShopping, () =>
                 {
                     return 2;

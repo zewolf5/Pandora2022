@@ -49,12 +49,17 @@ public class PandoraService : IPandoraAccess
         throw new NotImplementedException();
     }
 
-    public void WithdrawMoney(PersonData person, float amount1)
+    public bool WithdrawMoney(PersonData person, float amount1)
+    {
+        throw new NotImplementedException(); //return ok
+    }
+
+    public void DepositMoney(PersonData person, float amount2)
     {
         throw new NotImplementedException();
     }
 
-    public void DepositMoney(PersonData person, float amount2)
+    public DateTime GetCurrentDate()
     {
         throw new NotImplementedException();
     }

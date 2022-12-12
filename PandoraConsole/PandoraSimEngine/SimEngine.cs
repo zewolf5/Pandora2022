@@ -32,19 +32,31 @@ namespace PandoraSimEngine
         public void Start()
         {
             var persons = _population;
+            var currentDate = _service.GetCurrentDate();
+            var previousDate = currentDate.AddDays(-1);
+            Console.WriteLine($"*** STARTING SIMULATION ***");
+
             while (_isRunning)
             {
                 var sw = Stopwatch.StartNew();
                 foreach (var person in persons)
                 {
-                    var events = _chaos.GetEvents(person);
-                    foreach (var @event in events)
+                    var numberOfDaysSinceLastRun = (int)currentDate.Subtract(previousDate).TotalDays;
+                    for (int i = 0; i < numberOfDaysSinceLastRun; i++)
                     {
-                        ProcessEvent(person, @event);
+                        Console.WriteLine($"Processing {previousDate.AddDays(i):yyyy-MM-dd}.");
+                        var events = _chaos.GetEvents(person);
+                        foreach (var @event in events)
+                        {
+                            ProcessEvent(person, @event);
+                        }
                     }
+                    previousDate = currentDate;
                 }
 
+
                 Thread.Sleep(Math.Max(0, 120000 - (int)sw.ElapsedMilliseconds)); //1 day per 2 minutes
+                currentDate = _service.GetCurrentDate();
             }
             Console.WriteLine($"Sim ending");
         }
@@ -53,15 +65,6 @@ namespace PandoraSimEngine
         {
             switch (@event.EventType)
             {
-                case ChaosType.Death:
-                    if (!person.IsDead)
-                    {
-                        //_service.MarkDead(person);
-                        person.IsDead = true;
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} just died.");
-                    }
-                    break;
-
                 case ChaosType.CreateAccount:
                     if (!person.HasAccount)
                     {
@@ -88,43 +91,41 @@ namespace PandoraSimEngine
                     }
                     break;
 
-                case ChaosType.Retired:
-                    if (!person.IsPensionist)
-                    {
-                        _service.MarkPensionist(person);
-                        person.IsPensionist = true;
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} created account.");
-                    }
-                    break;
-
-                //case ChaosType.GotSalary:
-                //    //if (!person.IsPensionist)
-                //    //{
-                //    //    _service.MarkPensionist(person);
-                //    //    person.IsPensionist = true;
-                //    //    Console.WriteLine($"Person {person.Id} created account.");
-                //    //}
-                //    break;
-
                 case ChaosType.WentShopping:
-                    if (person.Card > 0 || person.Cash > 0)
+                    var product = _shopping.GetProduct();
+
+                    if (person.Cash >= product.price)
                     {
-                        var product = _shopping.GetProduct();
-                        _service.BuyProduct(person, product.product, product.description, product.price);
-                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought {product.product} ({product.description}) for {product.price}.");
+                        person.Cash -= product.price;
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought with CASH: {product.product} ({product.description}) for {product.price}.");
                     }
+                    else
+                    {
+                        _service.BuyProduct(person, product.product, product.description, product.price);
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} bought: {product.product} ({product.description}) for {product.price}.");
+                    }
+
+                    Console.WriteLine($"Person {person.OrignalData.Identifikator} bought {product.product} ({product.description}) for {product.price}.");
                     break;
 
                 case ChaosType.WithdrawMoney:
-                    float amount1 = new Random().Next(10000);
-                    _service.WithdrawMoney(person, amount1);
-                    Console.WriteLine($"Person {person.OrignalData.Identifikator} withdrew {amount1}.");
+                    float amount1 = new Random().Next(10000) + 1;
+                    bool ok = _service.WithdrawMoney(person, amount1);
+                    if (ok)
+                    {
+                        person.Cash += amount1;
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} withdrew {amount1}.");
+                    }
                     break;
 
                 case ChaosType.DepositMoney:
-                    float amount2 = new Random().Next(10000);
-                    _service.DepositMoney(person, amount2);
-                    Console.WriteLine($"Person {person.OrignalData.Identifikator} withdrew {amount2}.");
+                    float amount2 = new Random().Next(10000) + 1;
+                    if (person.Cash >= amount2)
+                    {
+                        person.Cash -= amount2;
+                        _service.DepositMoney(person, amount2);
+                        Console.WriteLine($"Person {person.OrignalData.Identifikator} withdrew {amount2}.");
+                    }
                     break;
             }
         }
