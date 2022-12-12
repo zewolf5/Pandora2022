@@ -61,6 +61,7 @@ namespace PandoraSimEngine
                         Console.WriteLine($"Person {person.Id} just died.");
                     }
                     break;
+
                 case ChaosType.CreateAccount:
                     if (!person.HasAccount)
                     {
@@ -77,6 +78,7 @@ namespace PandoraSimEngine
                         Console.WriteLine($"Person {person.Id} started in a new job.");
                     }
                     break;
+
                 case ChaosType.QuitJob:
                     if (person.HasJob)
                     {
@@ -85,6 +87,7 @@ namespace PandoraSimEngine
                         Console.WriteLine($"Person {person.Id} just quit their job.");
                     }
                     break;
+
                 case ChaosType.Retired:
                     if (!person.IsPensionist)
                     {
@@ -93,6 +96,7 @@ namespace PandoraSimEngine
                         Console.WriteLine($"Person {person.Id} created account.");
                     }
                     break;
+
                 case ChaosType.GotSalary:
                     //if (!person.IsPensionist)
                     //{
@@ -101,29 +105,26 @@ namespace PandoraSimEngine
                     //    Console.WriteLine($"Person {person.Id} created account.");
                     //}
                     break;
+
                 case ChaosType.WentShopping:
-                    if (person.Card > 0|| person.Cash > 0)
+                    if (person.Card > 0 || person.Cash > 0)
                     {
                         var product = _shopping.GetProduct();
                         //BANK WITHDRAW, CAHS?
                         Console.WriteLine($"Person {person.Id} bought {product.product} for {product.price}.");
                     }
                     break;
+
                 case ChaosType.WithdrawMoney:
-                    //if (!person.IsPensionist)
-                    //{
-                    //    _service.MarkPensionist(person);
-                    //    person.IsPensionist = true;
-                    //    Console.WriteLine($"Person {person.Id} created account.");
-                    //}
+                    float amount1 = new Random().Next(10000);
+                    _service.DepositMoney(person, amount1);
+                    Console.WriteLine($"Person {person.Id} withdrew {amount1}.");
                     break;
+
                 case ChaosType.DepositMoney:
-                    //if (!person.IsPensionist)
-                    //{
-                    //    _service.MarkPensionist(person);
-                    //    person.IsPensionist = true;
-                    //    Console.WriteLine($"Person {person.Id} created account.");
-                    //}
+                    float amount2 = new Random().Next(10000);
+                    _service.DepositMoney(person, amount2);
+                    Console.WriteLine($"Person {person.Id} withdrew {amount2}.");
                     break;
                 default:
 

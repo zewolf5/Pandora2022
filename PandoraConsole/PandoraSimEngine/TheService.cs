@@ -37,5 +37,10 @@ namespace PandoraSimEngine
         {
             throw new NotImplementedException();
         }
+
+        internal void DepositMoney(Person person, float amount)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
