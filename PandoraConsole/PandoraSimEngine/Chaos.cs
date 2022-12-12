@@ -10,7 +10,9 @@ namespace PandoraSimEngine
             var rnd = new Random();
             var events = new List<Event>();
             var birthdate = DateTime.Parse(person.OrignalData.Foedselsdato);
-            person.Age = 0;
+            person.Age = GetAge(birthdate);
+
+
             var eventChances = new Dictionary<ChaosType, Func<int>>();
 
             if (!person.HasJob && !person.HasAccount)
@@ -86,6 +88,16 @@ namespace PandoraSimEngine
         }
 
 
+
+        private int GetAge(DateTime birth)
+        {
+            return DateTime.Now.Year - birth.Year;
+            //var now = DateTime.Now;
+            //if (date.Year > now.Year) date = birth.AddYears(-100);
+            //var age = now.Year - date.Year;
+            //if (new DateTime(date.Year, now.Month, now.Day) < new DateTime(date.Year, date.Month, date.Day)) age -= 1;
+            //return age;
+        }
     }
 
 }
