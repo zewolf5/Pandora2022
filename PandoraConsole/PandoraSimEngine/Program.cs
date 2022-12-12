@@ -63,7 +63,7 @@ internal class Program
         var sim = new SimEngine(populationList, service);
 
         bool threaded = false;
-        if (threaded)
+        if (!threaded)
         {
             sim.Start();
         }

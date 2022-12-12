@@ -3,6 +3,7 @@ using Pandora.Common.Dto;
 using Pandora.Common.Interface;
 using System.Runtime.Intrinsics.X86;
 using Pandora.Common;
+using IO.Swagger.Api;
 
 namespace Pandora.Access.Access;
 
@@ -26,12 +27,25 @@ public class PandoraService : IPandoraAccess
 
     public object CreateAccount(PersonData person)
     {
-        throw new NotImplementedException();
+        string firstname = person.OrignalData.Visningnavn.Split(" ", StringSplitOptions.None)[0];
+        string lastName = person.OrignalData.Visningnavn.Split(" ", StringSplitOptions.None)[1];
+
+        var account2 = new TheAbcBankApi("https://hackaton2022.azurewebsites.net");
+        var ret = account2.TheAbcBankApiVisitPost(new IO.Swagger.Model.ApiVisitBody { Passport = person.PassportInfo.passport });
+        account2.Configuration.AddDefaultHeader("x-access-token", ret.AccessToken);
+        var ret2 = account2.TheAbcBankApiCustomerOpenAccountPost(new IO.Swagger.Model.CustomerOpenAccountBody(firstname, lastName, person.OrignalData.Identifikator));
+        return ret2;
     }
 
     public void NewJob(PersonData person)
     {
-        throw new NotImplementedException();
+        string firstname = person.OrignalData.Visningnavn.Split(" ", StringSplitOptions.None)[0];
+        string lastName = person.OrignalData.Visningnavn.Split(" ", StringSplitOptions.None)[1];
+        var date = DateTime.Parse(person.OrignalData.Foedselsdato);
+
+        var client = new EmploymentApi("https://hackaton2022.azurewebsites.net");
+        client.GovApiEmployeeAddPost(new IO.Swagger.Model.EmployeeAddBody(date, firstname, lastName, person.OrignalData.Identifikator, person.PassportInfo.passport));
+
     }
 
     public void QuitJob(PersonData person)
@@ -61,7 +75,9 @@ public class PandoraService : IPandoraAccess
 
     public DateTime GetCurrentDate()
     {
-        throw new NotImplementedException();
+        var client = new SimulationApi("https://hackaton2022.azurewebsites.net");
+        var curTime = client.CurrentTimeGetWithHttpInfo();
+        return DateTime.Now;
     }
 
     public float GetSalary(PersonData person)

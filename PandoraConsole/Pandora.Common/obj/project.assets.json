@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\AB01959\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\AB01959\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
+      "projectUniqueName": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
       "projectName": "Pandora.Common",
-      "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
+      "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
       "packagesPath": "C:\\Users\\AB01959\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\obj\\",
+      "outputPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\AB01959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -56,8 +52,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -66,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

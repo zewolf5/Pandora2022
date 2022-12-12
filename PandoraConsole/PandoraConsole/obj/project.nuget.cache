@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cnv4WQaCq5la8GGk6mLm/xdn23g5zdnBtwym2aE2XL4ubg11VsS8A7JEdYzGExpr1R6LdfrL8khIq4VUxWERYw==",
+  "dgSpecHash": "7MCmg7bt/K9QRpJgbtDjYc0j+I4PwZa1CHMTbO8fsAeP1wZlbWG2r/oZyBzlV7L/VvmUkc3O1uQgnMAbuaBKAA==",
   "success": true,
-  "projectFilePath": "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraConsole\\PandoraConsole.csproj",
+  "projectFilePath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\PandoraConsole\\PandoraConsole.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AB01959\\.nuget\\packages\\microsoft.extensions.apidescription.client\\3.0.0\\microsoft.extensions.apidescription.client.3.0.0.nupkg.sha512",
     "C:\\Users\\AB01959\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
@@ -65,7 +65,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'RestSharp 105.2.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'RestSharp 105.2.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "RestSharp",
       "targetGraphs": [
         "net6.0"

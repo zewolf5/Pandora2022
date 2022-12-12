@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj": {}
+    "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj": {}
   },
   "projects": {
-    "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj": {
+    "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
+        "projectUniqueName": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
         "projectName": "Pandora.Access",
-        "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
+        "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
         "packagesPath": "C:\\Users\\AB01959\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\obj\\",
+        "outputPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\AB01959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,14 +22,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
-                "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj"
+              "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj": {
+                "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj"
+              },
+              "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
+                "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj"
               }
             }
           }
@@ -59,8 +59,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -69,25 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
+    "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
-        "projectName": "Pandora.Common",
-        "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
+        "projectUniqueName": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj",
+        "projectName": "Pandora.API",
+        "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj",
         "packagesPath": "C:\\Users\\AB01959\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\obj\\",
+        "outputPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\AB01959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,6 +90,72 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[105.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
+        "projectName": "Pandora.Common",
+        "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj",
+        "packagesPath": "C:\\Users\\AB01959\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AB01959\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -118,8 +179,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -128,25 +188,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj": {
+    "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj",
+        "projectUniqueName": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj",
         "projectName": "PandoraSimEngine",
-        "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj",
+        "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\PandoraSimEngine.csproj",
         "packagesPath": "C:\\Users\\AB01959\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\obj\\",
+        "outputPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\PandoraSimEngine\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\AB01959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -154,17 +210,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj": {
-                "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj"
+              "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj": {
+                "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj"
               },
-              "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
-                "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj"
+              "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
+                "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj"
               }
             }
           }
@@ -190,8 +247,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -200,7 +256,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

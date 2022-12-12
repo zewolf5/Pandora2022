@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xsV7Vr/EUn/HHleR1CEvG29hkL6hJ+Qu62GUU6n+qh1hIOYJhqs1nYrZDVmupGeo+GRTshZ1m9PjhnOKMY5INg==",
+  "dgSpecHash": "cTet0yIJGEcKH+YZxuH2J7RmkjKxmUvqIrn9m/VF9FE4zLgUqCi/PgVlFmE68GpMAlYTEc91H1XjksOxOy1pxA==",
   "success": true,
-  "projectFilePath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj",
+  "projectFilePath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AB01959\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],

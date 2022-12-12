@@ -37,3 +37,16 @@ C:\Code\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.
 C:\Code\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\refint\Pandora.Input.dll
 C:\Code\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.pdb
 C:\Code\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\ref\Pandora.Input.dll
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\bin\Debug\net6.0\Resorces\nøkkelinfo_200.json
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\bin\Debug\net6.0\Pandora.Input.deps.json
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\bin\Debug\net6.0\Pandora.Input.dll
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\bin\Debug\net6.0\Pandora.Input.pdb
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.csproj.AssemblyReference.cache
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.AssemblyInfoInputs.cache
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.AssemblyInfo.cs
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.csproj.CoreCompileInputs.cache
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.dll
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\refint\Pandora.Input.dll
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\Pandora.Input.pdb
+C:\Code\c2\Pandora2022\PandoraConsole\Pandora.Input\obj\Debug\net6.0\ref\Pandora.Input.dll

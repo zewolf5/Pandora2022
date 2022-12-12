@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pandora.API\Pandora.API.csproj" />
     <ProjectReference Include="..\Pandora.Common\Pandora.Common.csproj" />
   </ItemGroup>
 

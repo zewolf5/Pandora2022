@@ -383,7 +383,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CurrentTimeGetWithHttpInfo ()
+        public ApiResponse<dynamic> CurrentTimeGetWithHttpInfo ()
         {
 
             var localVarPath = "/current_time";
@@ -420,7 +420,7 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<dynamic>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
         }

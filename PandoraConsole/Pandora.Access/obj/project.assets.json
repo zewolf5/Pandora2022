@@ -5,14 +5,33 @@
       "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestSharp/105.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net46/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net46/RestSharp.dll": {}
+        }
+      },
+      "Pandora.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2",
+          "RestSharp": "105.2.1"
+        },
+        "compile": {
+          "bin/placeholder/Pandora.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pandora.API.dll": {}
         }
       },
       "Pandora.Common/1.0.0": {
@@ -58,6 +77,51 @@
         "packageIcon.png"
       ]
     },
+    "RestSharp/105.2.1": {
+      "sha512": "kffDIIuUV+SMrU9PaCaDSe1Sn8SXZViPZK7Ol7JkzZN8u/+c1lTbycS+ALKoUQ7ey3QSie7zmyYLvfk46q0W/w==",
+      "type": "package",
+      "path": "restsharp/105.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35-client/RestSharp.dll",
+        "lib/net35-client/RestSharp.xml",
+        "lib/net35/RestSharp.dll",
+        "lib/net35/RestSharp.xml",
+        "lib/net4-client/RestSharp.dll",
+        "lib/net4-client/RestSharp.xml",
+        "lib/net4/RestSharp.dll",
+        "lib/net4/RestSharp.xml",
+        "lib/net45-client/RestSharp.dll",
+        "lib/net45-client/RestSharp.xml",
+        "lib/net45/RestSharp.dll",
+        "lib/net45/RestSharp.xml",
+        "lib/net451-client/RestSharp.dll",
+        "lib/net451-client/RestSharp.xml",
+        "lib/net451/RestSharp.dll",
+        "lib/net451/RestSharp.xml",
+        "lib/net452-client/RestSharp.dll",
+        "lib/net452-client/RestSharp.xml",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/net46-client/RestSharp.dll",
+        "lib/net46-client/RestSharp.xml",
+        "lib/net46/RestSharp.dll",
+        "lib/net46/RestSharp.xml",
+        "lib/sl4/RestSharp.Silverlight.dll",
+        "lib/sl4/RestSharp.Silverlight.xml",
+        "lib/windowsphone8/RestSharp.WindowsPhone.dll",
+        "lib/windowsphone8/RestSharp.WindowsPhone.xml",
+        "readme.txt",
+        "restsharp.105.2.1.nupkg.sha512",
+        "restsharp.nuspec"
+      ]
+    },
+    "Pandora.API/1.0.0": {
+      "type": "project",
+      "path": "../Pandora.API/Pandora.API.csproj",
+      "msbuildProject": "../Pandora.API/Pandora.API.csproj"
+    },
     "Pandora.Common/1.0.0": {
       "type": "project",
       "path": "../Pandora.Common/Pandora.Common.csproj",
@@ -67,28 +131,24 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Newtonsoft.Json >= 13.0.2",
+      "Pandora.API >= 1.0.0",
       "Pandora.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AB01959\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\AB01959\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
+      "projectUniqueName": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
       "projectName": "Pandora.Access",
-      "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
+      "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
       "packagesPath": "C:\\Users\\AB01959\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\obj\\",
+      "outputPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\AB01959\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -96,14 +156,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
-              "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj"
+            "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj": {
+              "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj"
+            },
+            "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj": {
+              "projectPath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Common\\Pandora.Common.csproj"
             }
           }
         }
@@ -129,8 +193,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -139,8 +202,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RestSharp 105.2.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RestSharp",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

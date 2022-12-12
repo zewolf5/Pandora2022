@@ -24,13 +24,31 @@
           }
         }
       },
+      "RestSharp/105.2.1": {
+        "runtime": {
+          "lib/net46/RestSharp.dll": {
+            "assemblyVersion": "105.2.1.0",
+            "fileVersion": "105.2.1.0"
+          }
+        }
+      },
       "Pandora.Access/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.2",
+          "Pandora.API": "1.0.0",
           "Pandora.Common": "1.0.0"
         },
         "runtime": {
           "Pandora.Access.dll": {}
+        }
+      },
+      "Pandora.API/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2",
+          "RestSharp": "105.2.1"
+        },
+        "runtime": {
+          "Pandora.API.dll": {}
         }
       },
       "Pandora.Common/1.0.0": {
@@ -53,7 +71,19 @@
       "path": "newtonsoft.json/13.0.2",
       "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
     },
+    "RestSharp/105.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kffDIIuUV+SMrU9PaCaDSe1Sn8SXZViPZK7Ol7JkzZN8u/+c1lTbycS+ALKoUQ7ey3QSie7zmyYLvfk46q0W/w==",
+      "path": "restsharp/105.2.1",
+      "hashPath": "restsharp.105.2.1.nupkg.sha512"
+    },
     "Pandora.Access/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Pandora.API/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

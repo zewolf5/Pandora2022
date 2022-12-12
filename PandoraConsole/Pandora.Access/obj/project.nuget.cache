@@ -1,10 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "Yk+0TUd4qKX1O+qkcVaZanf9Uyg+cn7+HYTcDml+YV2cDQGf788UU5Ov2NvwFrTBEXUnGmIkT1w9tQcOa98aBw==",
+  "dgSpecHash": "CCWlUIpQRVWK55kzBIxp5W9laH7nuV+NG3jtrBH6BY+83ay0Q0gj+sZ1ZmtdqaDWJHcEJchrHTk2tTjApnPy5w==",
   "success": true,
-  "projectFilePath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
+  "projectFilePath": "C:\\Code\\c2\\Pandora2022\\PandoraConsole\\Pandora.Access\\Pandora.Access.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AB01959\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\AB01959\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\AB01959\\.nuget\\packages\\restsharp\\105.2.1\\restsharp.105.2.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RestSharp 105.2.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RestSharp",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
