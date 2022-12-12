@@ -17,12 +17,13 @@ namespace PandoraSimEngine
 
             if (!person.HasJob && !person.HasAccount)
             {
+                eventChances.Add(ChaosType.CreateAccount, () => 1);
+
                 if (person.Age >= 18)
                 {
                     eventChances.Add(ChaosType.NewJob, () => 1);
                 }
-                eventChances.Add(ChaosType.CreateAccount, () => 1);
-
+             
                 eventChances.Add(ChaosType.WentShopping, () =>
                 {
                     return 2;

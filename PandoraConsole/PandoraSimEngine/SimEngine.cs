@@ -54,7 +54,6 @@ namespace PandoraSimEngine
                     previousDate = currentDate;
                 }
 
-
                 Thread.Sleep(Math.Max(0, 120000 - (int)sw.ElapsedMilliseconds)); //1 day per 2 minutes
                 currentDate = _service.GetCurrentDate();
             }
