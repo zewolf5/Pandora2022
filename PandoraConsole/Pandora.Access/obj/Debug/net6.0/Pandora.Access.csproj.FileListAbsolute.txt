@@ -1,6 +1,4 @@
-C:\Code\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Access.exe
 C:\Code\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Access.deps.json
-C:\Code\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Access.runtimeconfig.json
 C:\Code\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Access.dll
 C:\Code\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Access.pdb
 C:\Code\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\Pandora.Access.csproj.AssemblyReference.cache
@@ -11,7 +9,6 @@ C:\Code\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\Pandora.Acces
 C:\Code\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\Pandora.Access.dll
 C:\Code\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\refint\Pandora.Access.dll
 C:\Code\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\Pandora.Access.pdb
-C:\Code\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\Pandora.Access.genruntimeconfig.cache
 C:\Code\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\ref\Pandora.Access.dll
 C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Access.deps.json
 C:\Users\ab12229\source\repos\Pandora2022-1\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Access.dll
@@ -43,3 +40,6 @@ C:\pandora\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Co
 C:\pandora\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Common.pdb
 C:\pandora\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\Pandora.Access.csproj.CopyComplete
 C:\pandora\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\ref\Pandora.Access.dll
+C:\Code\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Common.dll
+C:\Code\Pandora2022\PandoraConsole\Pandora.Access\bin\Debug\net6.0\Pandora.Common.pdb
+C:\Code\Pandora2022\PandoraConsole\Pandora.Access\obj\Debug\net6.0\Pandora.Access.csproj.CopyComplete

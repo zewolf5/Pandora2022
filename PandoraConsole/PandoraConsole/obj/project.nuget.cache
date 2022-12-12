@@ -1,17 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "045nunHc9Gk9VJcSFhAFwZeOb9SE7XPa2op8owPEHK1M6Cuc2ZDr2EcaqR5hoLMT0dR+vgUh79zi0T0f0bfQfQ==",
+  "dgSpecHash": "E0hcp4/bL0Sv/99Dof3O3gcUvdvn/Paqh3K4puC64pJ5Cdc2UEluUiNhEzszfam+n7ijPx/ydgPf6YPXlBMxkA==",
   "success": true,
-  "projectFilePath": "C:\\pandora\\Pandora2022\\PandoraConsole\\PandoraConsole\\PandoraConsole.csproj",
+  "projectFilePath": "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraConsole\\PandoraConsole.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\BA05151\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\AB01959\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://d-115-270-038.adlab.apollonett.no:90/DnbLifeNuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  "logs": []
 }
