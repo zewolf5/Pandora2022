@@ -26,14 +26,14 @@ namespace PandoraSimEngine
             {
                 if (person.Age >= 18 && person.Age <= 35) return 2000;
                 if (person.Age >= 36 && person.Age <= 70) return 6000;
-                if (person.Age >= 70 ) return 60000;
+                if (person.Age >= 70) return 60000;
                 return 0;
             });
             eventChances.Add(ChaosType.QuitJob, () =>
             {
                 if (person.Age >= 12 && person.Age <= 35) return 2000;
                 if (person.Age >= 36 && person.Age <= 70) return 6000;
-                if (person.Age >= 70 ) return 2000;
+                if (person.Age >= 70) return 2000;
                 return 0;
             });
             eventChances.Add(ChaosType.CreateAccount, () =>
@@ -50,6 +50,18 @@ namespace PandoraSimEngine
             eventChances.Add(ChaosType.WentShopping, () =>
             {
                 return 4;
+            });
+            eventChances.Add(ChaosType.DepositMoney, () =>
+            {
+                if (person.Age >= 12 && person.Age <= 60) return 1000;
+                if (person.Age >= 60) return 365;
+                return 0;
+            });
+            eventChances.Add(ChaosType.WithdrawMoney, () =>
+            {
+                if (person.Age >= 12 && person.Age <= 60) return 1000;
+                if (person.Age >= 60) return 365;
+                return 0;
             });
 
             foreach (var evnt in eventChances)

@@ -97,21 +97,21 @@ namespace PandoraSimEngine
                     }
                     break;
 
-                case ChaosType.GotSalary:
-                    //if (!person.IsPensionist)
-                    //{
-                    //    _service.MarkPensionist(person);
-                    //    person.IsPensionist = true;
-                    //    Console.WriteLine($"Person {person.Id} created account.");
-                    //}
-                    break;
+                //case ChaosType.GotSalary:
+                //    //if (!person.IsPensionist)
+                //    //{
+                //    //    _service.MarkPensionist(person);
+                //    //    person.IsPensionist = true;
+                //    //    Console.WriteLine($"Person {person.Id} created account.");
+                //    //}
+                //    break;
 
                 case ChaosType.WentShopping:
                     if (person.Card > 0 || person.Cash > 0)
                     {
                         var product = _shopping.GetProduct();
                         _service.BuyProduct(person, product.product, product.description, product.price);
-                        Console.WriteLine($"Person {person.Id} bought {product.product} for {product.price}.");
+                        Console.WriteLine($"Person {person.Id} bought {product.product} ({product.description}) for {product.price}.");
                     }
                     break;
 
