@@ -58,3 +58,6 @@ C:\Code\Pandora2022\PandoraConsole\PandoraConsole\bin\Debug\net6.0\Newtonsoft.Js
 C:\Code\Pandora2022\PandoraConsole\PandoraConsole\bin\Debug\net6.0\Pandora.Input.dll
 C:\Code\Pandora2022\PandoraConsole\PandoraConsole\bin\Debug\net6.0\Pandora.Input.pdb
 C:\Code\Pandora2022\PandoraConsole\PandoraConsole\obj\Debug\net6.0\PandoraConsole.csproj.CopyComplete
+C:\Code\Pandora2022\PandoraConsole\PandoraConsole\bin\Debug\net6.0\RestSharp.dll
+C:\Code\Pandora2022\PandoraConsole\PandoraConsole\bin\Debug\net6.0\Pandora.API.dll
+C:\Code\Pandora2022\PandoraConsole\PandoraConsole\bin\Debug\net6.0\Pandora.API.pdb

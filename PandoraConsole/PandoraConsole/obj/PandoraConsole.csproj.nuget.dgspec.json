@@ -4,6 +4,75 @@
     "C:\\Code\\Pandora2022\\PandoraConsole\\PandoraConsole\\PandoraConsole.csproj": {}
   },
   "projects": {
+    "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj",
+        "projectName": "Pandora.API",
+        "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj",
+        "packagesPath": "C:\\Users\\AB01959\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AB01959\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[105.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -97,6 +166,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj": {
+                "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.API\\Pandora.API.csproj"
+              },
               "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj": {
                 "projectPath": "C:\\Code\\Pandora2022\\PandoraConsole\\Pandora.Input\\Pandora.Input.csproj"
               }
@@ -112,6 +184,32 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.ApiDescription.Client": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NSwag.ApiDescription.Client": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[13.0.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

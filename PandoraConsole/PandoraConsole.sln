@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandora.Access", "Pandora.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandora.Common", "Pandora.Common\Pandora.Common.csproj", "{85648626-3E0B-4829-9ACF-15E56A4B15DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandora.Input", "Pandora.Input\Pandora.Input.csproj", "{DF557551-16B4-447F-9BFF-A83582DBF3C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandora.Input", "Pandora.Input\Pandora.Input.csproj", "{DF557551-16B4-447F-9BFF-A83582DBF3C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandora.API", "Pandora.API\Pandora.API.csproj", "{44E3C1E3-E7CB-4B04-A298-FFF6673CC228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DF557551-16B4-447F-9BFF-A83582DBF3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF557551-16B4-447F-9BFF-A83582DBF3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF557551-16B4-447F-9BFF-A83582DBF3C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E3C1E3-E7CB-4B04-A298-FFF6673CC228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E3C1E3-E7CB-4B04-A298-FFF6673CC228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E3C1E3-E7CB-4B04-A298-FFF6673CC228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E3C1E3-E7CB-4B04-A298-FFF6673CC228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
