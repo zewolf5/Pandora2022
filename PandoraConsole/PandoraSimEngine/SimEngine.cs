@@ -110,7 +110,7 @@ namespace PandoraSimEngine
                     if (person.Card > 0 || person.Cash > 0)
                     {
                         var product = _shopping.GetProduct();
-                        //BANK WITHDRAW, CAHS?
+                        _service.BuyProduct(person, product.product, product.description, product.price);
                         Console.WriteLine($"Person {person.Id} bought {product.product} for {product.price}.");
                     }
                     break;

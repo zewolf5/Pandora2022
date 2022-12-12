@@ -42,5 +42,10 @@ namespace PandoraSimEngine
         {
             throw new NotImplementedException();
         }
+
+        internal void BuyProduct(Person person, string product, string description, float price)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

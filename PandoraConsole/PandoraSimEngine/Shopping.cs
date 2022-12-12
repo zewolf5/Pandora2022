@@ -8,22 +8,23 @@ namespace PandoraSimEngine
 {
     internal class Shopping
     {
-        List<string> _products = new List<string>();
+        List<(string, string, float)> _products = new List<(string, string, float)>();
         public Shopping()
         {
             var products = @"produktliste.csv";
             foreach (var item in File.ReadAllLines(products))
             {
-                var product = item.Split(';')[0].Trim('[', ']');
-                _products.Add(product);
+                var parts = item.Split(';');
+
+                _products.Add((parts[0].Trim('[', ']'), parts[1].Trim('[', ']'), float.Parse(parts[1].Trim('[', ']'))));
             }
         }
 
-        public (string product, float price) GetProduct()
+        public (string product, string description, float price) GetProduct()
         {
             var rnd = new Random();
             var item = rnd.Next(_products.Count);
-            return (_products[item], rnd.Next(100000) + 10);
+            return (_products[item].Item1, _products[item].Item2, _products[item].Item3);
         }
     }
 }
