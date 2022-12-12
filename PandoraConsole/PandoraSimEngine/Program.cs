@@ -1,2 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using PandoraSimEngine;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        var populationData = GetPopulationData();
+
+        var sim = new SimEngine(populationData);
+
+        sim.Start();
+    }
+
+    private static object GetPopulationData()
+    {
+        return null;
+    }
+}

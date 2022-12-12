@@ -1,0 +1,15 @@
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\PandoraSimEngine.exe
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\PandoraSimEngine.deps.json
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\PandoraSimEngine.runtimeconfig.json
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\PandoraSimEngine.dll
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\bin\Debug\net6.0\PandoraSimEngine.pdb
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.csproj.AssemblyReference.cache
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.AssemblyInfoInputs.cache
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.AssemblyInfo.cs
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.csproj.CoreCompileInputs.cache
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.dll
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\refint\PandoraSimEngine.dll
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.pdb
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\PandoraSimEngine.genruntimeconfig.cache
+C:\Code\Pandora2022\PandoraConsole\PandoraSimEngine\obj\Debug\net6.0\ref\PandoraSimEngine.dll
