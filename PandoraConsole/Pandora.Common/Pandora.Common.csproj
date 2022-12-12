@@ -8,15 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Access\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Pandora.Common\Pandora.Common.csproj" />
+    <Folder Include="Interface\" />
   </ItemGroup>
 
 </Project>
