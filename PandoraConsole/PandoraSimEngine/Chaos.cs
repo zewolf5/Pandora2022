@@ -18,13 +18,36 @@ namespace PandoraSimEngine
 
             eventChances.Add(ChaosType.Retired, () =>
             {
-                if (person.Age >= 67 && person.Age <= 70) return 1000; // 1/1000 chance (every 3 years)
+                if (person.Age >= 67) return 1000;
+                if (person.Age >= 60 && person.Age <= 67) return 30000; //early pension
                 return 0;
             });
             eventChances.Add(ChaosType.NewJob, () =>
             {
-                if (person.Age >= 12 && person.Age <= 70) return 2000; // 5/10000 chance (every 5 years)
+                if (person.Age >= 12 && person.Age <= 35) return 2000;
+                if (person.Age >= 36 && person.Age <= 70) return 6000;
                 return 0;
+            });
+            eventChances.Add(ChaosType.QuitJob, () =>
+            {
+                if (person.Age >= 12 && person.Age <= 35) return 2000;
+                if (person.Age >= 36 && person.Age <= 70) return 6000;
+                return 0;
+            });
+            eventChances.Add(ChaosType.CreateAccount, () =>
+            {
+                if (person.Age >= 12 && person.Age <= 70) return 200;
+                return 0;
+            });
+            eventChances.Add(ChaosType.Death, () =>
+            {
+                if (person.Age >= 12 && person.Age <= 70) return 30000; //ca 80 år
+                if (person.Age >= 70) return 7500;
+                return 0;
+            });
+            eventChances.Add(ChaosType.WentShopping, () =>
+            {
+                return 4;
             });
 
             foreach (var evnt in eventChances)
