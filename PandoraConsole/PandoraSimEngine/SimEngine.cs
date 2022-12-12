@@ -1,4 +1,5 @@
 ﻿using Pandora.Access.Access;
+using Pandora.Common.Interface;
 using PandoraSimEngine.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,9 @@ namespace PandoraSimEngine
         private Chaos _chaos;
         private Shopping _shopping;
         private Population _population;
-        private PandoraService _service;
+        private IPandoraAccess _service;
 
-        public SimEngine(Population populationData, PandoraService service)
+        public SimEngine(Population populationData, IPandoraAccess service)
         {
             _isRunning = true;
             _chaos = new Chaos();
@@ -63,7 +64,7 @@ namespace PandoraSimEngine
                 case ChaosType.CreateAccount:
                     if (!person.HasAccount)
                     {
-                        _service.CreateAccount(person);
+                        object value = _service.CreateAccount(person);
                         person.HasAccount = true;
                         Console.WriteLine($"Person {person.Id} created account.");
                     }
